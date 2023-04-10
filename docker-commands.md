@@ -43,3 +43,11 @@ docker network connect <network name> <containerID>
 docker logs --details <container name> || show logs cua 1 container
 
 for i in `docker ps -a |grep "Exited"|awk '{print $1}'`; do docker rm $i; done
+docker volume inspect volume id
+docker volume ls
+docker run -it -v volumeID:/folder imagename
+
+docker build -t test:1 -f Dockerfile .
+docker system -df | hiển thị build cache
+docker system prune -a | xoa tât cả các cache
+docker run -it --link nameofothercontainerid containerid 
